@@ -99,6 +99,19 @@ class HBNBCommand(cmd.Cmd):
         else:
             print("** class doesn't exist **")
 
+    def do_count(self, line):
+        """
+            Retrieves the number of instances of a class
+        """
+        if line in HBNBCommand.options:
+            count = 0
+            for key, objs in storage.all().items():
+                if line in key:
+                    count += 1
+            print(count)
+        else:
+            print("** class doesn't exist **")
+
     def do_update(self, line):
         """
             Update an instance based on class attribute and id by adding
