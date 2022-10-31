@@ -33,6 +33,9 @@ class BaseModel():
         cls_name = self.__class__.__name__
         return ('[{}] ({}) {}'.format(cls_name, self.id, self.__dict__))
 
+    def __repr__(self):
+        return (self.__str__())
+
     def save(self):
         self.updated_at = datetime.now()
         models.storage.save()
