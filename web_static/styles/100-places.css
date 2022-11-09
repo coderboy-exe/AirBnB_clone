@@ -1,7 +1,5 @@
 .places {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+text-align: center;
 }
 .places h1 {
   font-size: 30px;
@@ -13,9 +11,9 @@
   border-radius: 4px;
   padding: 20px;
   margin: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  box-sizing: border-box;
+  display: inline-block;
+  min-height: 650px;
+  vertical-align: top;
 }
 .places article h2 {
   font-size: 30px;
@@ -37,6 +35,9 @@ div.information {
   height: 80px;
   border-top: 1px solid #DDDDDD;
   border-bottom: 1px solid #DDDDDD;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 50px;
 }
 div.max_guest,
 div.number_rooms,
@@ -66,9 +67,12 @@ div.description {
 
 /* Amenities styling */
 
+.places .amenities {
+  padding: 40px 0;
+}
+
 .places .amenities,
 .places .reviews {
-  margin-top: 40px;
   width: 100%;
   height: inherit;
 }
